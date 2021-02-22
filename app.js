@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-const secrets = require("../secrets.js");
+const secrets = require("./secrets.js");
 
 app.get("/api", (req, res) => {
   res.json({
