@@ -11,5 +11,5 @@ app.get("/api", (req, res) => {
 });
 
 app.listen(secrets.APP_PORT, () => {
-  console.log("Server up and running");
+  console.log(`Server up and running on PORT: ${secrets.APP_PORT}`);
 });
