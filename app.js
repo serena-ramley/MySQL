@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 
+const secrets = require("../secrets.js");
+
 app.get("/api", (req, res) => {
   res.json({
     success: 1,
@@ -8,6 +10,6 @@ app.get("/api", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(secrets.APP_PORT, () => {
   console.log("Server up and running");
 });
