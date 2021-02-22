@@ -1,6 +1,6 @@
 # MySQL
 
-# MySQL
+Sample NodeJS + Express + REST API + MySQL integration
 
 ## Instructions
 
