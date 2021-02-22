@@ -12,6 +12,8 @@ Sample NodeJS + Express + REST API + MySQL integration
 
 **MySQL** is a Relational Database Management System (RDBMS) that uses Structured Query Language (SQL) to query the database.
 
+**Database connection pooling** utilizes caching to keep database connections open so that the connections can be reused while an application is running.
+
 ## Instructions
 
 Create a secrets.js file following the example in sample-secrets.js
