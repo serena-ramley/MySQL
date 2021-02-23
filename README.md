@@ -16,7 +16,11 @@ Sample NodeJS + Express + REST API + MySQL integration
 
 ## Instructions
 
-In Amazon RDS, create a MySQL database and connect to it from MySQL Workbench: https://aws.amazon.com/getting-started/hands-on/create-mysql-db/
+In Amazon RDS, create a MySQL database and connect to it from MySQL Workbench:
+https://aws.amazon.com/getting-started/hands-on/create-mysql-db/
+
+Modify the VPC Security Groups so that you will be able to access it from localhost on your computer:
+https://stackabuse.com/using-aws-rds-with-node-js-and-express-js/
 
 Create a secrets.js file following the example in sample-secrets.js and fill in the DB_PORT, DB_HOST, DB_USER AND DB_PASS according to the MySQL database that you created in Amazon RDS
 
