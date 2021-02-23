@@ -1,6 +1,8 @@
 # MySQL
 
-Sample NodeJS + Express + REST API + MySQL integration
+Sample NodeJS + Express + REST API + MySQL integration.
+
+Sample Application: Admin login to a user management system
 
 ## Definitions
 
@@ -46,10 +48,16 @@ In the terminal, run:
 
 ## Examples
 
-In Postman, try sending a GET request to the API, replacing APP_PORT with the one that you defined in secrets.js
-
-<img src="https://github.com/serena-ramley/MySQL/blob/main/sampleGET.png" alt="Sample GET request in Postman" />
-
 MySQL Workbench
 
 <img src="https://github.com/serena-ramley/MySQL/blob/main/sampleMySQLWorkbench.png?raw=true" alt="MySQL Workbench" />
+
+Login to get a bearer token, and then use the bearer token when submitting a request.
+
+In the headers, use:
+
+    Content-Type             application/json
+
+In Insomnia (a REST API client), try sending a POST request to the API, replacing APP_PORT with the one that you defined in secrets.js
+
+<img src="https://github.com/serena-ramley/MySQL/blob/main/sampleCreateUser.png?raw=true" alt="Sample POST request in Insomnia to create a user" />
