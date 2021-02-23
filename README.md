@@ -52,4 +52,4 @@ In Postman, try sending a GET request to the API, replacing APP_PORT with the on
 
 MySQL Workbench
 
-<img src="https://github.com/serena-ramley/MySQL/blob/main/sampleMySQLWorkbench.png?raw=true alt="MySQL Workbench" />
+<img src="https://github.com/serena-ramley/MySQL/blob/main/sampleMySQLWorkbench.png?raw=true" alt="MySQL Workbench" />
