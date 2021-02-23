@@ -16,13 +16,13 @@ Sample NodeJS + Express + REST API + MySQL integration
 
 ## Instructions
 
-Create a secrets.js file following the example in sample-secrets.js
+In Amazon RDS, create a MySQL database and connect to it from MySQL Workbench: https://aws.amazon.com/getting-started/hands-on/create-mysql-db/
+
+Create a secrets.js file following the example in sample-secrets.js and fill in the DB_PORT, DB_HOST, DB_USER AND DB_PASS according to the MySQL database that you created in Amazon RDS
 
 In the terminal, run:
 
     node app.js
-
-In Amazon RDS, create a MySQL database and connect to it from MySQL Workbench: https://aws.amazon.com/getting-started/hands-on/create-mysql-db/
 
 ## Examples
 
