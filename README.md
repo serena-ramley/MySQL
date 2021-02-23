@@ -38,12 +38,18 @@ In MySQL Workbench, create the database:
         );
     SELECT * FROM registration;
 
+Note that the name of the database (i.e. "test" in this example) is what you should use for DB_NAME in secrets.js, not the name of the Amazon RDS instance
+
 In the terminal, run:
 
     node app.js
 
 ## Examples
 
-In postman, try sending a GET request to the API, replacing APP_PORT with the one that you defined in secrets.js
+In Postman, try sending a GET request to the API, replacing APP_PORT with the one that you defined in secrets.js
 
 <img src="https://github.com/serena-ramley/MySQL/blob/main/sampleGET.png" alt="Sample GET request in Postman" />
+
+MySQL Workbench
+
+<img src="https://github.com/serena-ramley/MySQL/blob/main/sampleMySQLWorkbench.png?raw=true alt="MySQL Workbench" />
