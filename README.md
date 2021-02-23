@@ -20,6 +20,20 @@ In Amazon RDS, create a MySQL database and connect to it from MySQL Workbench: h
 
 Create a secrets.js file following the example in sample-secrets.js and fill in the DB_PORT, DB_HOST, DB_USER AND DB_PASS according to the MySQL database that you created in Amazon RDS
 
+In MySQL Workbench, create the database:
+
+    CREATE DATABASE test;
+    USE test;
+    CREATE TABLE registration(
+        id int primary key,
+        first_name varchar(30),
+        last_name varchar(30),
+        email varchar(40),
+        password varchar(32),
+        number varchar(15)
+        );
+    SELECT * FROM registration;
+
 In the terminal, run:
 
     node app.js
