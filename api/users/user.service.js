@@ -38,6 +38,18 @@ module.exports = {
       }
     );
   },
+  getUserByEmail: (email, callBack) => {
+    pool.query(
+      `SELECT * FROM registration WHERE email = ?`,
+      [email],
+      (errors, results, fields) => {
+        if (error) {
+          callBack(error);
+        }
+        return callBack(null, results[0]);
+      }
+    );
+  },
   updateUsers: (data, callBack) => {
     pool.query(
       `UPDATE registration set first_name=?, last_name=?, email=?, password=?, number=? where id = ?`,

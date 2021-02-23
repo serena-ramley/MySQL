@@ -2,10 +2,14 @@ const {
   create,
   getUsers,
   getUserById,
-  updateUser,
+  getUserByEmail,
+  updateUsers,
   deleteUser,
 } = require("./user.service");
-const { genSaltSync, hashSync } = require("bcrypt");
+const secrets = require("../../secrets.js");
+
+const { genSaltSync, hashSync, compareSync } = require("bcrypt");
+const { sign } = require("jsonwebtoken");
 
 module.exports = {
   createUser: (req, res) => {
@@ -95,6 +99,38 @@ module.exports = {
         success: 1,
         message: "User deleted",
       });
+    });
+  },
+  login: (req, res) => {
+    const { body } = req;
+    getUserByEmail(body.email, (err, results) => {
+      if (err) {
+        console.error(err);
+      }
+      if (!results) {
+        return res.json({
+          success: 0,
+          data: "Invalid email or password",
+        });
+      }
+
+      const result = compareSync(body.password, results.password);
+      if (result) {
+        results.password = undefined;
+        const jsontoken = sign({ result: results }, secrets.JWT_KEY, {
+          expiresIn: "1h",
+        });
+        return res.json({
+          success: 1,
+          message: "Logged in successfully",
+          token: jsontoken,
+        });
+      } else {
+        return res.json({
+          success: 0,
+          data: "Invalid email or password",
+        });
+      }
     });
   },
 };
