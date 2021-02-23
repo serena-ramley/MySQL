@@ -21,7 +21,9 @@ Create a secrets.js file following the example in sample-secrets.js
 In the terminal, run:
 
     node app.js
-    
+
+In Amazon RDS, create a MySQL database and connect to it from MySQL Workbench: https://aws.amazon.com/getting-started/hands-on/create-mysql-db/
+
 ## Examples
 
 In postman, try sending a GET request to the API, replacing APP_PORT with the one that you defined in secrets.js
