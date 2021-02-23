@@ -16,12 +16,32 @@ Sample NodeJS + Express + REST API + MySQL integration
 
 ## Instructions
 
-Create a secrets.js file following the example in sample-secrets.js
+In Amazon RDS, create a MySQL database and connect to it from MySQL Workbench:
+https://aws.amazon.com/getting-started/hands-on/create-mysql-db/
+
+Modify the VPC Security Groups so that you will be able to access it from localhost on your computer:
+https://stackabuse.com/using-aws-rds-with-node-js-and-express-js/
+
+Create a secrets.js file following the example in sample-secrets.js and fill in the DB_PORT, DB_HOST, DB_USER AND DB_PASS according to the MySQL database that you created in Amazon RDS
+
+In MySQL Workbench, create the database:
+
+    CREATE DATABASE test;
+    USE test;
+    CREATE TABLE registration(
+        id int primary key,
+        first_name varchar(30),
+        last_name varchar(30),
+        email varchar(40),
+        password varchar(32),
+        number varchar(15)
+        );
+    SELECT * FROM registration;
 
 In the terminal, run:
 
     node app.js
-    
+
 ## Examples
 
 In postman, try sending a GET request to the API, replacing APP_PORT with the one that you defined in secrets.js
